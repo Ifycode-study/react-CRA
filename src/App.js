@@ -9,6 +9,7 @@ function App() {
     {title: 'Title two', id: 2},
     {title: 'Title three', id: 3},
   ]);
+  const [showEvents, setShowEvents] = useState(true);
 
   const handleClick = () => {
     setName('Ifeoma');
@@ -29,7 +30,18 @@ function App() {
     <div className="App">
       <h1>My name is {name}</h1>
       <button onClick={handleClick}>Change name</button>
-      {events?.map((event) => (
+      <hr />
+      {showEvents && (
+        <div>
+          <button onClick={() => {setShowEvents(false)}}>Hide events</button>
+        </div>
+      )}
+      {!showEvents && (
+        <div>
+          <button onClick={() => {setShowEvents(true)}}>Show events</button>
+        </div>
+      )}
+      {showEvents && events.map((event) => (
         <div key={event.id}>
           <h2>{event.title}</h2>
           <button onClick={() => {handleEventDeleteClick(event.id)}}>Delete event</button>
