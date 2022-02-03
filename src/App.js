@@ -60,7 +60,7 @@ function App() {
       </div>
 
       {showModal && (
-        <Modal handleClose={()=> {handleClose(false)}}>
+        <Modal handleClose={()=> {handleClose(false)}} isSalesModal={true}>
         <h2>10% Off coupon code!!!</h2>
         <p>Use the coode: 0023 at checkout</p>
       </Modal>
