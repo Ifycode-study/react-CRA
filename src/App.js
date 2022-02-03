@@ -1,7 +1,8 @@
 import './App.css';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Title from './components/Title';
 import Modal from './components/Modal';
+import EventList from './components/EventList';
 
 function App() {
 
@@ -51,12 +52,8 @@ function App() {
           <button onClick={() => {setShowEvents(true)}}>Show events</button>
         </div>
       )}
-      {showEvents && events.map((event) => (
-        <React.Fragment key={event.id}>
-          <h2>{event.title}</h2>
-          <button onClick={() => {handleEventDeleteClick(event.id)}}>Delete event</button>
-        </React.Fragment>
-      ))}
+
+      {showEvents && <EventList events={events} handleEventDeleteClick={handleEventDeleteClick} />}
 
       <div>
         <button onClick={()=> {handleClose(true)}}>Show Modal</button>
