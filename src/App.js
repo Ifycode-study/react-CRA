@@ -12,6 +12,7 @@ function App() {
     {title: 'Title three', id: 3},
   ]);
   const [showEvents, setShowEvents] = useState(true);
+  const [showModal, setShowModal] = useState(true);
 
   const handleClick = () => {
     setName('Ifeoma');
@@ -26,6 +27,10 @@ function App() {
         return id !== event.id;
       });
     });
+  }
+
+  const handleClose = () => {
+    setShowModal(false);
   }
 
   const subtitle = 'All the latest events with Maria';
@@ -53,10 +58,12 @@ function App() {
         </React.Fragment>
       ))}
 
-      <Modal>
+      {showModal && (
+        <Modal handleClose={handleClose}>
         <h2>10% Off coupon code!!!</h2>
         <p>Use the coode: 0023 at checkout</p>
       </Modal>
+      )}
     </div>
   );
 }
