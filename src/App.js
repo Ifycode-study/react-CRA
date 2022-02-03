@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Title from './components/Title';
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <Title title="Maria events" subtitle={subtitle}/>
-      
+
       <h1>My name is {name}</h1>
       <button onClick={handleClick}>Change name</button>
       <hr />
@@ -47,10 +47,10 @@ function App() {
         </div>
       )}
       {showEvents && events.map((event) => (
-        <div key={event.id}>
+        <React.Fragment key={event.id}>
           <h2>{event.title}</h2>
           <button onClick={() => {handleEventDeleteClick(event.id)}}>Delete event</button>
-        </div>
+        </React.Fragment>
       ))}
     </div>
   );
