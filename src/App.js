@@ -27,9 +27,12 @@ function App() {
     });
   }
 
+  const subtitle = 'All the latest events with Maria';
+
   return (
     <div className="App">
-      <Title />
+      <Title title="Maria events" subtitle={subtitle}/>
+      
       <h1>My name is {name}</h1>
       <button onClick={handleClick}>Change name</button>
       <hr />
