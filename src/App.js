@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Title from './components/Title';
 import Modal from './components/Modal';
 import EventList from './components/EventList';
+import NewEventForm from './components/NewEventForm';
 
 function App() {
 
@@ -61,8 +62,7 @@ function App() {
 
       {showModal && (
         <Modal handleClose={()=> {handleClose(false)}} isSalesModal={true}>
-        <h2>10% Off coupon code!!!</h2>
-        <p>Use the coode: 0023 at checkout</p>
+          <NewEventForm />
       </Modal>
       )}
     </div>
