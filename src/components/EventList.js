@@ -8,6 +8,7 @@ export default function EventList({ events, handleEventDeleteClick }) {
             //<React.Fragment key={event.id}>
             <div className={styles.card} key={event.id}>
                 <h2>{event.title}</h2>
+                <p>{event.location} | {event.date}</p>
                 <button onClick={() => {handleEventDeleteClick(event.id)}}>Delete event</button>
             </div>
             //</React.Fragment>
