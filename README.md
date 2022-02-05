@@ -1,8 +1,9 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React CRA - Build Web Apps with React & Firebase
+React's Create React App with code examples, from "Build Web Apps with React & Firebase" Udemy course by Net Ninja.
 
 ## Available Scripts
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 In the project directory, you can run:
 
